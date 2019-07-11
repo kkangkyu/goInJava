@@ -12,7 +12,7 @@ public class OptionalStudy {
     @Test
     public void getCarInsuranceName() {
         Person person = new Person();
-        String AA =  person.getCar().getInsurance().getName();
+        String a =  person.getCar().getInsurance().getName();
     }
     // getCarInsuranceName 메서드 실행 시 Person의 Car가 비어있다면 NullPointerException 발생
 
@@ -189,4 +189,5 @@ public class OptionalStudy {
             return Optional.empty(); // 그 외에는 빈 Optional 반환
         }
     }
+
 }
