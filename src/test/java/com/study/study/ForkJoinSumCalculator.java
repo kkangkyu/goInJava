@@ -23,6 +23,8 @@ public class ForkJoinSumCalculator extends RecursiveTask<Long> {  // recusiveTas
         this.end = end;
     }
 
+
+
     /**
      * 1,2,3,4,5,6
      * 1,2,3 비동기, 4,5,6 동기처리
