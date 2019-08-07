@@ -36,7 +36,7 @@ public class ForkJoinSumCalculator extends RecursiveTask<Long> {  // recusiveTas
             return computeSequentially();  // 서브태스트로 못 쪼개면 결과를 계산
         }
         ForkJoinSumCalculator leftTask = new ForkJoinSumCalculator(numbers, start, start + length/2);  // 왼쪽 절반 서브태스크 생성
-        leftTask.fork();  // 새로 만든 서브탴스크를 비동기 실행 - 다른 쓰레드에게 시킴
+        leftTask.fork();  // 새로 만든 서브탴스크를 비동기 실행 - 다른 git config --global credential.helper wincred 시킴
         ForkJoinSumCalculator rightTask = new ForkJoinSumCalculator(numbers, start + length/2, end); //오른쪽 절반 서브태스크 생성
         Long rightResult = rightTask.compute();  // 동기 실행
         Long leftResult = leftTask.join(); // 왼쪽 비동기로 실행한 것이 끝나길 기다린다.
